@@ -52,8 +52,9 @@ class Socket{
                         longitude  : realData[0].objectForKey("longitude")   as! Double ,
                         altitude   : realData[0].objectForKey("altitude")    as! Double ,
                         message    : realData[0].objectForKey("message")     as! String ,
-                        file_path  : realData[0].objectForKey("file_path")   as! String ,
-                        posted_time: realData[0].objectForKey("posted_time") as! String)
+                        image_path  : realData[0].objectForKey("image_path")   as! String ,
+                        movie_path  : realData[0].objectForKey("movie_path")   as! String ,
+                        posted_time: realData[0].objectForKey("uptime") as! String)
                     
                     
                     

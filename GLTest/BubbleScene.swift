@@ -49,7 +49,7 @@ class BubbleScene : SKScene , SKPhysicsContactDelegate, SocketDelegate  {
             latitude : sensor.latitude,
             longitude: sensor.longitude ,
             altitude : sensor.altitude ,
-            file_path : "")
+            image_path : "", movie_path : "")
         
         /* 向いている方向を補正とか言ってみるテスト
         println("補正前 \(sensor.heading)")
@@ -140,25 +140,24 @@ class BubbleScene : SKScene , SKPhysicsContactDelegate, SocketDelegate  {
         
         //サムネイルを表示
         
-        if ( poi.file_path != "") {
-            let thumbPath = poi.file_path
+        if ( poi.image_path != "" || poi.movie_path != "") {
+            let isImage = poi.image_path != ""
+            let thumbPath = poi.image_path != "" ? poi.image_path : poi.movie_path
             println(thumbPath)
             
             var image : UIImage!
             
-            let file_name = poi.file_path.componentsSeparatedByString("/")[1]
             
             //画像なら取得，動画なら適当な画像
-            let file_type = file_name.componentsSeparatedByString(".")[1]
-            if file_type == "jpg" {
-                let url = NSURL(string: "\(Settings.serverURL)/\(file_name)")
+            if isImage {
+                let url = NSURL(string: "\(Settings.serverURL)/\(thumbPath)")
                 let mediaData :NSData = NSData(contentsOfURL: url!)!
                 image = UIImage(data:mediaData)
-            } else if file_type == "mp4" {
+            } else if !isImage {
                 image = UIImage(named: "mthumb")
             }
             
-            if file_type == "jpg" || file_type == "mp4" {
+            if poi.image_path != "" || poi.movie_path != "" {
                 let thumb : SKSpriteNode = SKSpriteNode(texture: SKTexture(image: image), size: CGSizeMake(200, 150))
                 thumb.zPosition = 10
                 thumb.position = CGPointMake(0 , -100)

@@ -75,17 +75,17 @@ class DetailBubbleController: UIViewController {
         messageText.text = self.poi.message
         
         //画像を持ってくる
-        if ( poi.file_path != "" ) {
-            let file_name = poi.file_path.componentsSeparatedByString("/")[1]
+        if ( poi.movie_path != "" || poi.image_path != "" ) {
+            let isImage = poi.image_path != ""
+            let file_name = isImage ? poi.image_path : poi.movie_path
             let url = NSURL(string: "\(Settings.serverURL)/\(file_name)")
             let mediaData :NSData = NSData(contentsOfURL: url!)!
             
             //画像なら表示、動画なら再生
-            let file_type = file_name.componentsSeparatedByString(".")[1]
-            if file_type == "jpg" {
+            if isImage {
                 detailImage.hidden = false
                 detailImage.image = UIImage(data:mediaData)
-            } else if file_type == "mp4" {
+            } else if !isImage {
                 println( "\(Settings.serverURL)/\(file_name)")
                 containerView.hidden    = false
                 let playVideoController = self.childViewControllers[0] as! PlayVideoController

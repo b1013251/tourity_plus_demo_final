@@ -103,6 +103,13 @@ class Uploader : NSObject , NSURLSessionDelegate {
     画像をアップロードする．
     */
     func upload(delegate : PostViewController) {
+        //乱数生成
+        let nLat = Double( Int(arc4random_uniform(100)) - 50 ) / 100000.0
+        let nLon = Double( Int(arc4random_uniform(100)) - 50 ) / 100000.0
+        
+        print(nLat)
+        print(nLon)
+        
         //アップロード後に呼び出すクラスの準備
         self.delegate = delegate
         
@@ -141,11 +148,11 @@ class Uploader : NSObject , NSURLSessionDelegate {
         httpBody.appendData(String("--\(boundary)\r\n").dataUsingEncoding(NSUTF8StringEncoding)!)
         
         httpBody.appendData(String("Content-Disposition: from-data; name=\"latitude\"\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding)!)
-        httpBody.appendData(String("\(sensor.latitude)\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding)!)
+        httpBody.appendData(String("\(sensor.latitude + nLat)\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding)!)
         httpBody.appendData(String("--\(boundary)\r\n").dataUsingEncoding(NSUTF8StringEncoding)!)
         
         httpBody.appendData(String("Content-Disposition: from-data; name=\"longitude\"\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding)!)
-        httpBody.appendData(String("\(sensor.longitude)\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding)!)
+        httpBody.appendData(String("\(sensor.longitude + nLon)\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding)!)
         httpBody.appendData(String("--\(boundary)\r\n").dataUsingEncoding(NSUTF8StringEncoding)!)
         
         httpBody.appendData(String("Content-Disposition: from-data; name=\"altitude\"\r\n\r\n").dataUsingEncoding(NSUTF8StringEncoding)!)
