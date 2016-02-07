@@ -114,7 +114,7 @@ class Uploader : NSObject , NSURLSessionDelegate {
         } else if self.status == MessageStatus.Video {
             readyVideoData()
         } else {
-            readyTextData()
+            //Nothing
         }
         
         //セッション設定
@@ -165,11 +165,7 @@ class Uploader : NSObject , NSURLSessionDelegate {
         request.HTTPMethod = "POST"
         request.HTTPBody  = httpBody
         request.setValue("multipart/form-data ; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-        
-        //          クッキーの追加
-        let cookies = readCookie()
-        let header  : NSDictionary = NSHTTPCookie.requestHeaderFieldsWithCookies(cookies)
-        request.allHTTPHeaderFields = header as [NSObject : AnyObject]
+
         
         //タスクの生成・アップロード！
         println("uploading")
@@ -248,34 +244,4 @@ class Uploader : NSObject , NSURLSessionDelegate {
         
         type = "video/mpeg"
     }
-    
-    private func readyTextData() {
-        
-    }
-    
-    private func readCookie() -> [NSHTTPCookie] {
-        let userDefaults : NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        var sessionIDCookies = userDefaults.stringForKey("sessionID")
-        
-        if sessionIDCookies == nil {
-            println("クッキーがなかったので")
-            sessionIDCookies = ""
-        }
-        
-        let properties : NSDictionary = NSDictionary(objectsAndKeys:
-            Settings.serverURL    , NSHTTPCookieDomain ,
-            "/"                   , NSHTTPCookiePath   ,
-            "connect.sid"      , NSHTTPCookieName   ,
-            sessionIDCookies! , NSHTTPCookieValue
-        )
-        
-        let cookie  :  NSHTTPCookie  = NSHTTPCookie(properties: properties as [NSObject : AnyObject])!
-        let cookies : [NSHTTPCookie] = [
-            cookie
-        ]
-        
-        return cookies
-    }
-
-
 }

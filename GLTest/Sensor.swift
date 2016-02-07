@@ -51,8 +51,13 @@ class Sensor : NSObject , CLLocationManagerDelegate{
         locationManager.requestAlwaysAuthorization()
         
         //位置情報
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.distanceFilter = 300
+        //locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        //locationManager.distanceFilter = 300
+        
+        
+        let userDefaults : NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        longitude = userDefaults.doubleForKey("setLon")
+        latitude  = userDefaults.doubleForKey("setLat")
         
         //コンパス
         locationManager.headingFilter = kCLHeadingFilterNone
@@ -101,10 +106,9 @@ class Sensor : NSObject , CLLocationManagerDelegate{
     func locationManager(manager : CLLocationManager! , didUpdateToLocation newLocation :CLLocation!
         , fromLocation oldLocation : CLLocation! ) {
             
-            longitude = newLocation.coordinate.longitude
-            latitude  = newLocation.coordinate.latitude
-            altitude  = newLocation.altitude
-            
+            //longitude = newLocation.coordinate.longitude
+            //latitude  = newLocation.coordinate.latitude
+            //altitude  = newLocation.altitude
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateHeading newHeading: CLHeading!) {

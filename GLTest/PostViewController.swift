@@ -238,9 +238,7 @@ class PostViewController: UIViewController , UITextFieldDelegate ,
     }
     
     func uploadFinish() {
-        println("だめなんすかね")
         self.navigationController?.popViewControllerAnimated(true)
-        println("だめみたいですね")
     }
     
     

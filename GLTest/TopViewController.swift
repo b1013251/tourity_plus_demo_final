@@ -28,6 +28,8 @@ class TopViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBarHidden = true
+        
         let sensor = Sensor.sharedInstance
         sensor.start()
     }

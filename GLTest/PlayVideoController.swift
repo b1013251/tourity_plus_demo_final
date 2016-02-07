@@ -20,7 +20,7 @@ class PlayVideoController: AVPlayerViewController {
         playerItem = AVPlayerItem(asset: avAsset)
         player   = AVPlayer(playerItem: playerItem)
         
-        println("再生するお")
+        println("再生する")
         
         player.play()
     }

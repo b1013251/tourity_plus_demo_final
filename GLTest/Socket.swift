@@ -54,6 +54,9 @@ class Socket{
                         message    : realData[0].objectForKey("message")     as! String ,
                         file_path  : realData[0].objectForKey("file_path")   as! String ,
                         posted_time: realData[0].objectForKey("posted_time") as! String)
+                    
+                    
+                    
                     self.delegate.createBubble(poi)
                 }
             }

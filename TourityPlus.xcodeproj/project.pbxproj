@@ -35,7 +35,6 @@
 		17DECAB21B7ACA0800678182 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DECAB11B7ACA0800678182 /* ViewController.swift */; };
 		17DECAB71B7ACA0800678182 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17DECAB61B7ACA0800678182 /* Images.xcassets */; };
 		17DECABA1B7ACA0800678182 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17DECAB81B7ACA0800678182 /* LaunchScreen.xib */; };
-		17DECAC61B7ACA0800678182 /* GLTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DECAC51B7ACA0800678182 /* GLTestTests.swift */; };
 		17DECAD01B7AD39600678182 /* BubbleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DECACF1B7AD39600678182 /* BubbleScene.swift */; };
 		17DECAD21B7AD4B100678182 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DECAD11B7AD4B100678182 /* Sensor.swift */; };
 		17DECAD41B7ADE9500678182 /* ARHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DECAD31B7ADE9500678182 /* ARHelper.swift */; };
@@ -44,16 +43,6 @@
 		17E53AF71B81A60F00C2CB87 /* AppendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E53AF61B81A60F00C2CB87 /* AppendViewController.swift */; };
 		31108A1B0483BAE40C4B26F3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59EE848CD7E5F99EA49044B9 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		17DECAC01B7ACA0800678182 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17DECAA21B7ACA0800678182 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 17DECAA91B7ACA0800678182;
-			remoteInfo = GLTest;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		17055F491B7CD42E0081B023 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
@@ -86,7 +75,6 @@
 		17DECAB11B7ACA0800678182 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		17DECAB61B7ACA0800678182 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		17DECAB91B7ACA0800678182 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		17DECABF1B7ACA0800678182 /* TourityPlusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TourityPlusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17DECAC41B7ACA0800678182 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17DECAC51B7ACA0800678182 /* GLTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTestTests.swift; sourceTree = "<group>"; };
 		17DECACF1B7AD39600678182 /* BubbleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleScene.swift; sourceTree = "<group>"; };
@@ -106,13 +94,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				31108A1B0483BAE40C4B26F3 /* Pods.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		17DECABC1B7ACA0800678182 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				17DECAAA1B7ACA0800678182 /* TourityPlus.app */,
-				17DECABF1B7ACA0800678182 /* TourityPlusTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -286,24 +266,6 @@
 			productReference = 17DECAAA1B7ACA0800678182 /* TourityPlus.app */;
 			productType = "com.apple.product-type.application";
 		};
-		17DECABE1B7ACA0800678182 /* TourityPlusTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 17DECACC1B7ACA0800678182 /* Build configuration list for PBXNativeTarget "TourityPlusTests" */;
-			buildPhases = (
-				17DECABB1B7ACA0800678182 /* Sources */,
-				17DECABC1B7ACA0800678182 /* Frameworks */,
-				17DECABD1B7ACA0800678182 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				17DECAC11B7ACA0800678182 /* PBXTargetDependency */,
-			);
-			name = TourityPlusTests;
-			productName = GLTestTests;
-			productReference = 17DECABF1B7ACA0800678182 /* TourityPlusTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -317,10 +279,6 @@
 					17DECAA91B7ACA0800678182 = {
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = 64LEQXTB98;
-					};
-					17DECABE1B7ACA0800678182 = {
-						CreatedOnToolsVersion = 6.3.2;
-						TestTargetID = 17DECAA91B7ACA0800678182;
 					};
 				};
 			};
@@ -338,7 +296,6 @@
 			projectRoot = "";
 			targets = (
 				17DECAA91B7ACA0800678182 /* TourityPlus */,
-				17DECABE1B7ACA0800678182 /* TourityPlusTests */,
 			);
 		};
 /* End PBXProject section */
@@ -357,13 +314,6 @@
 				173C27B41BFC11BA00E659F2 /* listbutton.png in Resources */,
 				17DECABA1B7ACA0800678182 /* LaunchScreen.xib in Resources */,
 				17DECAB71B7ACA0800678182 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		17DECABD1B7ACA0800678182 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,23 +400,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		17DECABB1B7ACA0800678182 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				17DECAC61B7ACA0800678182 /* GLTestTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		17DECAC11B7ACA0800678182 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 17DECAA91B7ACA0800678182 /* TourityPlus */;
-			targetProxy = 17DECAC01B7ACA0800678182 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		17DECAB81B7ACA0800678182 /* LaunchScreen.xib */ = {
@@ -598,40 +532,6 @@
 			};
 			name = Release;
 		};
-		17DECACD1B7ACA0800678182 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = GLTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = TourityPlusTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GLTest.app/GLTest";
-			};
-			name = Debug;
-		};
-		17DECACE1B7ACA0800678182 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = GLTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = TourityPlusTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GLTest.app/GLTest";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -649,15 +549,6 @@
 			buildConfigurations = (
 				17DECACA1B7ACA0800678182 /* Debug */,
 				17DECACB1B7ACA0800678182 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		17DECACC1B7ACA0800678182 /* Build configuration list for PBXNativeTarget "TourityPlusTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				17DECACD1B7ACA0800678182 /* Debug */,
-				17DECACE1B7ACA0800678182 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

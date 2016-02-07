@@ -10,6 +10,8 @@
 	<string>GLTest</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>6C2EF965BC2C8EBCA55CFF39C0FE6D81D6329FDE</key>
+		<string>https://github.com/b1013251/tourity_plus_demo_final.git</string>
 		<key>78C222EADAE42332D7037A82DB4F6EB1591FABD1</key>
 		<string>https://github.com/b1013251/tourity_test_2.git</string>
 		<key>D9178BE77B68DB601A0433D185BEB957033ED01D</key>
@@ -19,17 +21,19 @@
 	<string>GLTest.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>78C222EADAE42332D7037A82DB4F6EB1591FABD1</key>
+		<key>6C2EF965BC2C8EBCA55CFF39C0FE6D81D6329FDE</key>
 		<string>..</string>
+		<key>78C222EADAE42332D7037A82DB4F6EB1591FABD1</key>
+		<string>../../tourity_test_2</string>
 		<key>D9178BE77B68DB601A0433D185BEB957033ED01D</key>
 		<string>../../GLtest2</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/b1013251/tourity_test_2.git</string>
+	<string>https://github.com/b1013251/tourity_plus_demo_final.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>78C222EADAE42332D7037A82DB4F6EB1591FABD1</string>
+	<string>6C2EF965BC2C8EBCA55CFF39C0FE6D81D6329FDE</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -47,6 +51,14 @@
 			<string>78C222EADAE42332D7037A82DB4F6EB1591FABD1</string>
 			<key>IDESourceControlWCCName</key>
 			<string>tourity_test_2</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6C2EF965BC2C8EBCA55CFF39C0FE6D81D6329FDE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TourityPlusReleaseDemo</string>
 		</dict>
 	</array>
 </dict>

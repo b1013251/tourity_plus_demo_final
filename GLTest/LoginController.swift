@@ -13,8 +13,6 @@ class LoginController: UIViewController , UINavigationControllerDelegate, UIWebV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
         let url     = NSURL(string:  Settings.serverURL + "/auth")!
         let request = NSURLRequest(URL: url)
         webView.delegate = self
@@ -23,7 +21,6 @@ class LoginController: UIViewController , UINavigationControllerDelegate, UIWebV
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
